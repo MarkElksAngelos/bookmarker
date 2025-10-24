@@ -1,5 +1,3 @@
-
-
 @media (max-width: 480px) {
   html {
     font-size: 10px;
@@ -7,14 +5,14 @@
   .container {
     width: 95dvw;
   }
-  .form-group input{
+  .form-group input {
     width: 85cqw;
     height: 10cqw;
   }
   .form-group label {
     font-size: 1.5rem;
   }
-  .cssbuttons-io-button{
+  .cssbuttons-io-button {
     width: 50%;
     font-size: 1.5rem;
   }
@@ -24,14 +22,18 @@
   h2 i {
     display: none !important;
   }
-  .delete span, .visit span{
+  .delete span,
+  .visit span {
     display: none;
   }
-  td a{
+  td a {
     width: 20% !important;
   }
-  
+  input[type="text"] {
+    font-size: 1.7rem;
+  }
 }
+
 @media (min-width: 481px) and (max-width: 768px) {
   h2 {
     font-size: clamp(2.3rem, 0.5405rem + 3.5969vw, 3rem);
@@ -42,12 +44,15 @@
   .container {
     width: 95dvw;
   }
-  .form-group input{
+  .form-group input {
     width: 85cqw;
     height: 6cqw;
   }
   .form-group label {
     font-size: 1.5rem;
+  }
+  input[type="text"] {
+    font-size: 1.7rem;
   }
 }
 
@@ -58,7 +63,7 @@
   html {
     font-size: 14px;
   }
-  .form-group input{
+  .form-group input {
     height: 3cqw;
   }
 }
