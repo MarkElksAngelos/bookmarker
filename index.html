@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <script
+      src="https://kit.fontawesome.com/a8c6bfc4af.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <video autoplay muted loop>
+      <source src="./Background/1.mp4" type="video/mp4" />
+    </video>
+    <main>
+      <h1>Bookmarker</h1>
+      <section class="container">
+        <div>
+          <h2>
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+        </div>
+        <div class="form-group form-name">
+          <input
+            type="text"
+            required
+            aria-label="name"
+            maxlength="13"
+            id="name"
+          />
+          <label>Bookmark Name</label>
+        </div>
+        <div class="form-group form-link">
+          <input type="text" required aria-label="link" id="link" />
+          <label>Website URL</label>
+        </div>
+        <button
+          title="Add"
+          class="cssbuttons-io-button"
+          onclick="handleBookmark()"
+        >
+          <svg
+            height="25"
+            width="25"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
+              fill="currentColor"
+            ></path>
+          </svg>
+          <span>Add</span>
+        </button>
+      </section>
+      <section class="container transition">
+        <table id="bookmarkTable"></table>
+      </section>
+    </main>
+    <div class="filter"></div>
+    <div class="window">
+      <button class="button" onclick="hideErrorWindow()">
+        <span class="X"></span>
+        <span class="Y"></span>
+      </button>
+      <div class="text">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>

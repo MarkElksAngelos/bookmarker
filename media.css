@@ -1,0 +1,70 @@
+
+
+@media (max-width: 480px) {
+  html {
+    font-size: 10px;
+  }
+  .container {
+    width: 95dvw;
+  }
+  .form-group input{
+    width: 85cqw;
+    height: 10cqw;
+  }
+  .form-group label {
+    font-size: 1.5rem;
+  }
+  .cssbuttons-io-button{
+    width: 50%;
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: clamp(1rem, 0.2rem + 6vw, 3rem);
+  }
+  h2 i {
+    display: none !important;
+  }
+  .delete span, .visit span{
+    display: none;
+  }
+  td a{
+    width: 20% !important;
+  }
+  
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  h2 {
+    font-size: clamp(2.3rem, 0.5405rem + 3.5969vw, 3rem);
+  }
+  html {
+    font-size: 12px;
+  }
+  .container {
+    width: 95dvw;
+  }
+  .form-group input{
+    width: 85cqw;
+    height: 6cqw;
+  }
+  .form-group label {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  h2 {
+    font-size: clamp(2.3rem, 0.5405rem + 3.5969vw, 2.5rem);
+  }
+  html {
+    font-size: 14px;
+  }
+  .form-group input{
+    height: 3cqw;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Baumans&family=Lugrasimo&family=Pacifico&display=swap");
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  interpolate-size: allow-keywords;
+}
+body {
+  display: flex;
+  justify-content: center !important;
+  overflow-x: hidden;
+}
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(70%);
+}
+* {
+  margin: 0;
+}
+h1 {
+  font-family: Lugrasimo, "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  background: linear-gradient(to right, #daa5fd, #a4cff7, #cfbdf7, #daa5fd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  font-size: 3rem !important;
+  background-size: 300% 100%;
+  background-position: 0% 0%;
+  animation: moveGradient 2s linear infinite;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: center;
+  gap: 2rem;
+}
+h1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 20.5rem;
+  height: 20px;
+  z-index: -1;
+  background-image: linear-gradient(to top, #a14ac7 0%, #574f9e 100%);
+  border-radius: 5px;
+  transition: 0.4s ease-in-out;
+}
+h1:hover::before {
+  height: 100%;
+  border-radius: 10px;
+}
+h1:hover {
+  background: linear-gradient(to bottom, #f2def5 0%, #f8fafc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container {
+  width: 80vw;
+  max-width: 70rem;
+  backdrop-filter: blur(5px) brightness(0.8);
+  border-radius: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-block: 2rem;
+}
+h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #daa5fd, #a4cff7, #cfbdf7, #daa5fd);
+  background-size: 300% 100%;
+  background-position: 0% 0%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moveGradient 2s linear infinite;
+  font-family: Pacifico, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+.form-group {
+  position: relative;
+  background: linear-gradient(90deg, #5c02af, #906df3, #b47ce9, #5c02af);
+  background-size: 300% 300%;
+  animation: borderFlow 3.5s linear infinite;
+  padding: 3px;
+  border-radius: 1rem;
+}
+.invalid {
+  background: linear-gradient(90deg, #af0219, #e23460, #f83496, #940b39);
+  background-size: 300% 300%;
+  animation: borderFlow 3.5s linear infinite;
+}
+.valid {
+  background: linear-gradient(90deg, #249409, #6cc737, #9df886, #258344);
+  background-size: 300% 300%;
+  animation: borderFlow 3.5s linear infinite;
+}
+
+
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.form-group input {
+  width: 68cqw;
+  max-width: 60rem;
+  font-size: 1rem;
+  padding: 1rem 0.5rem;
+  outline: none;
+  color: #ddd;
+  background: #111111ab;
+  border: none;
+  border-radius: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  padding: 0 4px;
+  color: #ccc;
+  font-size: 1em;
+  font-weight: 100;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group input:is(:focus, :valid) + label {
+  top: -20px;
+  font-size: 1rem;
+  color: #daa5fd;
+  padding: 0 4px;
+}
+/* BUTTON */
+
+.cssbuttons-io-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 0.5em 1.5em;
+  color: white;
+  background: linear-gradient(0deg, rgb(189, 59, 206), rgb(97, 14, 165));
+  border: none;
+  outline: none;
+  border-bottom: 3px solid rgb(111, 5, 133);
+  box-shadow: 0 0.5em 0.5em -0.4em rgba(143, 76, 182, 0.5);
+  letter-spacing: 0.08em;
+  border-radius: 20em;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 25%;
+  font-family: Baumans, Tahoma, Geneva, Verdana, sans-serif;
+}
+.title {
+  font-family: Baumans, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cssbuttons-io-button:hover,
+.visit:hover,
+.delete:hover {
+  filter: brightness(1.2);
+  color: rgba(246, 218, 255, 0.5);
+}
+
+.cssbuttons-io-button:active,
+.visit:active,
+.delete:active {
+  transition: 0.2s;
+  transform: scale(0.9);
+}
+table {
+  width: 90%;
+  border-collapse: collapse;
+}
+tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+tr:last-child {
+  border-bottom: 0px;
+}
+tr:not(:first-child) td {
+  padding-block: 1.5rem;
+}
+tr:first-child td {
+  padding-bottom: 1.5rem;
+}
+td {
+  width: 25%;
+  font-family: Baumans, sans-serif;
+  font-weight: 300;
+  text-shadow: #2c065e 0px 0px 8px;
+  font-size: 1.5rem;
+  color: #ebebeb;
+  text-align: center;
+}
+.visit,
+.delete {
+  display: flex;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5em 1.5em;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 0 0.5em 1em 0.01em rgba(131, 32, 180, 0.445);
+  letter-spacing: 0.08em;
+  border-radius: 20em;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: Baumans, Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: auto;
+}
+.visit {
+  background: linear-gradient(0deg, rgb(24, 139, 216), rgb(87, 64, 218));
+}
+.delete {
+  background: linear-gradient(0deg, rgb(201, 26, 14), rgb(201, 12, 160));
+}
+.transition {
+  transition: height 0.5s ease-in-out;
+  height: 6.5rem;
+}
+input[type="text"] {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+a,
+a:visited,
+a.delete {
+  text-decoration: none;
+}
+
+/* Window */
+
+.filter {
+  position: absolute;
+  height: 100dvh;
+  width: 100dvw;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.514);
+  opacity: 0;
+  transition: opacity 0.2s;
+  display: none;
+}
+.window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80dvw;
+  aspect-ratio: 1.8/0.5;
+  z-index: 1;
+  max-width: 35rem;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  backdrop-filter: blur(20px) brightness(2);
+  display: none;
+  flex-direction: column;
+  text-align: left;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: rgb(245, 213, 255);
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.4s;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-bottom: 3rem;
+}
+.button {
+  position: relative;
+  width: 4em;
+  height: 4em;
+  border: none;
+  background: none;
+  border-radius: 5px;
+  transition: 0.5s;
+  align-self: flex-end;
+}
+
+.X {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: #fff;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  top: -70%;
+  left: 50%;
+  width: 3em;
+  height: 1.7em;
+  font-size: 12px;
+  border: none;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.button:hover {
+  background: linear-gradient(
+    to right,
+    hsla(210, 42%, 10%, 0.137),
+    hsla(279, 85%, 8%, 0.192)
+  );
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.window i {
+  color: #c5a0ff;
+  font-size: 1.6rem;
+}
+.text {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+}
+
+.button:hover > .close {
+  animation: close 0.2s forwards 0.25s;
+}
+
+@keyframes close {
+  100% {
+    opacity: 1;
+  }
+}
